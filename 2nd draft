@@ -1,0 +1,97 @@
+import random
+import math
+
+WINNING = 5
+
+ #welcome
+def welcome():
+    print("               Welcome to the binary Number Game")
+    print("\n You will enter a number between 1 and 100 to play.")
+    print("\n The computer will enter a number in decimal form.")
+    print("   You will enter the same number in binary form.")
+    print("\n The computer will enter a number in binary form.")
+    print("  You will enter the same number in decimal form.")
+    print("  If you are able to match the numbers correctly, you win.")
+    print("\n binary numbers are in 0's or 1's and have a value of 2. ")
+    print(" \n  Decimal numbers are in 1 - 100's. ")
+    print('---------------------------------------------------------')
+   
+    #round
+def round ():
+    max_round = 0
+    count = 0
+     
+    if max_round == 0:
+        count = count + 1
+        max_round = max_round + count
+    for count in range(max_round):
+        count = count + 1
+        print("Round", max_round)
+        print('---------------------------------------------------------')
+    else:
+        return max_round
+              
+#Computers Choice
+def computer_choice():
+    coin_flip = random.randint(0,3)
+    
+    #if binary number choosen
+    if coin_flip != 3:
+        binary = computer_choice = random.randint(1,100)
+        computer_choice = bin(computer_choice)
+        decimal_needed = input(print(" Enter", computer_choice, "in decimal form"))
+        user_choice(decimal_needed)
+        return bin(decimal_needed)
+    else:    
+    #if decimal number choosen
+        coin_flip == 3 
+        decimal = computer_choice = random.randint(1,100)
+        binary_needed = (input(print(" Enter", decimal, "in binary form")))
+        user_choice()
+        
+def winner():
+    #if decimal
+    round = 1
+    for num in range(0):
+     user_choice = range(100)    
+     computer_choice = range(100)
+    if user_choice == computer_choice: 
+       count = 0
+       count = count + 1
+       win = count
+       round_winner = print ("You win this round!")
+     
+    elif round < 11 and computer_choice != user_choice:
+        return ("You lost this round!")  
+    elif round == 11 and win >= 5:
+        return ("Congratulatons! You won the game!")
+                
+                
+#User input
+def user_choice():
+    #decimal_needed =
+    #computer_choice =
+    
+    if decimal_needed == computer_choice:
+        print("You won this round.")
+        
+    else:
+      print("You lost this round.") 
+      
+      
+    
+def main():
+
+        #welcome
+        welcome()
+        #Total of rounds
+        round()
+       #Get computer choice
+        computer_choice()
+       #Get user choice
+        user_choice()
+       #Winner
+        winner()
+
+#Call the function
+main ()
