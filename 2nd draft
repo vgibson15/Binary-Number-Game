@@ -38,41 +38,60 @@ def computer_choice():
     #if binary number choosen
     if coin_flip != 3:
         binary = computer_choice = random.randint(1,100)
-        computer_choice = bin(computer_choice)
+        computer_choice = int(computer_choice,2)
+        #remove 0b in binary
+        computer_choice = int(computer_choice,2)
         decimal_needed = input(print(" Enter", computer_choice, "in decimal form"))
-        user_choice(decimal_needed)
-        return bin(decimal_needed)
     else:    
     #if decimal number choosen
-        coin_flip == 3 
-        decimal = computer_choice = random.randint(1,100)
-        binary_needed = (input(print(" Enter", decimal, "in binary form")))
-        user_choice()
+        if coin_flip == 3: 
+            decimal = computer_choice = random.randint(1,100)
+            binary_needed = (input(print(" Enter", decimal, "in binary form")))
+    
         
 def winner():
-    #if decimal
-    round = 1
-    for num in range(0):
-     user_choice = range(100)    
-     computer_choice = range(100)
-    if user_choice == computer_choice: 
-       count = 0
-       count = count + 1
-       win = count
-       round_winner = print ("You win this round!")
-     
-    elif round < 11 and computer_choice != user_choice:
-        return ("You lost this round!")  
-    elif round == 11 and win >= 5:
+user_choice = ?
+computer_choice = ?
+
+    #while round is less than 11 after each round say who wins
+    while round != 11:
+    
+    #calculate if the user wins
+    
+    
+    #say the user wins a round if it's decimal value = computers'binary value or binary value = computer'ss decimal
+    round_winner = print ("You win this round!")
+    # say the user loses a round if it's decimal value doesn't = the computers binary value or the decimal value doesn't = the computer's binary 
+    
+    #start the round process again
+    
+    
+    
+    #when the round is 11 display they won if they win more than 5 rounds then end the program
+    
+    
+         
+
         return ("Congratulatons! You won the game!")
                 
                 
 #User input
 def user_choice():
-    #decimal_needed =
-    #computer_choice =
+    #binary numbers to find decimal number
+    decimal_needed = 10
+    binary_needed = bin(decimal_needed)
+    binary_needed = int(binary_needed)
     
-    if decimal_needed == computer_choice:
+    #computer random number when decimal
+    computer_choicea = random.randint(1,100)
+    
+    #computer random number when binary
+    computer_choiceb = random.randint(1,100)
+    computer_choiceb = bin(computer_choiceb)
+    # take out ob needed computer_choiceb = 
+  
+    
+    if decimal_needed == computer_choicea or decimal_needed == computer_choiceb:
         print("You won this round.")
         
     else:
